@@ -1,0 +1,844 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+/* Default colors from Front-End Mentors */
+:root {
+  --primary-color1: hsl(213, 96%, 18%);
+  --primary-color2: hsl(243, 100%, 62%);
+  --primary-color3: hsl(228, 100%, 84%);
+  --primary-color4: hsl(206, 94%, 87%);
+  --primary-color5: hsl(354, 84%, 57%);
+  --neutral-color1: hsl(231, 11%, 63%);
+  --neutral-color2: hsl(229, 24%, 87%);
+  --neutral-color3: hsl(217, 100%, 97%);
+  --neutral-color4: hsl(231, 100%, 99%);
+  --neutral-color5: hsl(0, 0%, 100%);
+}
+
+
+/* Desktop Styles */
+@media (min-width: 376px) {
+    body {
+        background-color: var(--neutral-color3);
+        font-family: "Ubuntu", sans-serif;
+      }
+      .national {
+        margin: 5em 14.5em;
+        background-color: var(--neutral-color5);
+        height: 35em;
+        border-radius: 1em;
+      }
+      /* THE SIDE WITH IMAGE AND IT'S CONSTANT */
+      nav {
+        background-image: url("../multi-step-form-main/assets/images/bg-sidebar-desktop.svg");
+        background-repeat: no-repeat;
+        height: auto;
+        left: 1em;
+        height: 33em;
+        position: relative;
+        width: 20em;
+        top: 1em;
+        border-radius: 1em;
+        bottom: 1em;
+        justify-content: space-between;
+      }
+      nav p {
+          border-radius: 50%;
+          border: solid var(--neutral-color3) 2px;
+          padding: 12px;
+          width: 0.6em;
+          height: 0.6em;
+          color: var( --neutral-color5);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+         margin-left: 2em;
+  margin-top: 2em;
+        }
+          nav p:hover {
+            color: var(--primary-color1);
+            background-color: var(--primary-color4);
+          }
+          .upNum-cont1,.upNum-cont2, .upNum-cont3, .upNum-cont4{
+              position: relative;
+              top: 2em;
+          }
+   .upNum-hold1 #step1, h4{
+          position: absolute;
+          left: 5em;
+         bottom: 0.1px;
+      }
+      .upNum-hold2 #step2, h4{
+          position: absolute;
+          left: 5em;
+         bottom: 0.1px;
+      }
+      .upNum-hold3 #step3, h4{
+          position: absolute;
+          left: 5em;
+         bottom: 0.1px;
+      }
+      .upNum-hold4 #step4, h4{
+          position: absolute;
+          left: 5em;
+         bottom: 0.1px;
+      }
+      .upNum-hold1 h4, .upNum-hold2 h4, .upNum-hold3 h4, .upNum-hold4 h4{
+       color: var(--neutral-color3);
+       opacity: 0.5;
+      }
+      .upNum-hold1 div, .upNum-hold2 div, .upNum-hold3 div, .upNum-hold4 div{
+  color: var(--neutral-color4);
+  font-weight: 700;
+      }
+      /* THE CONSTANT SIDE ENDS HERE */
+      /* NOW HERE IS FOR FIRST FORM */
+      .first-form, .second-form, .Third-form, .Fourth-form{
+        position: relative;
+      }
+      .first-hold, .second-hold, .Third-hold, .Fourth-hold{
+        position: absolute;
+        bottom: 35em;
+        left: 23em;
+      }
+      
+     .Third-hold, .Fourth-hold{
+      /* bottom: 43.5em; */
+      bottom: 37em;
+      }
+      .second-hold{
+        position: absolute;
+       bottom: 48em;
+      }
+      .first-hold h2, .second-hold h2, .Third-hold h2, .Fourth-hold h2{
+        color: var(--primary-color1);
+      }
+      .first-hold p, .second-hold p, .Third-hold p, .Fourth-hold p{
+        color: var(--neutral-color1);
+        font-size: 15px;
+      }
+      .twoHold{
+        line-height: 0.6;
+      }
+       #login-form {
+      width: 400px;
+      position: relative;
+      top: 2em;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--primary-color1);
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 16px;
+      outline: none;
+      border: var(--neutral-color2) 1px solid;
+      border-radius: 5px;
+    }
+    input[type="text"]::placeholder,
+    input[type="email"]::placeholder{
+      color: var(--neutral-color1);
+    }
+    #next-cont1, #next-cont2, #next-cont3, #next-cont4{
+      position: relative;
+    }
+    #next-cont1, #next-cont4{
+      bottom: 24em;
+    }
+    #next-cont4{
+      top: 9em;
+    }
+    #nextPage1, #nextPage2, #goBack1, #nextPage3, #goBack2, #goBack3, #nextPage4{
+  border: none;
+  background-color: var(--primary-color1);
+  color: var(--neutral-color4);
+  width: 6em;
+  height: 2em;
+  font-size: 1em;
+  border-radius: 5px;
+    }
+    #nextPage1{
+      position: absolute;
+      left: 42.5em;
+      bottom: 2px;
+    }
+    /* Second Form */
+    .form-cont1,.form-cont2, .form-cont3 {
+      position: relative;
+      width: 8em;
+      height: 10em;
+     bottom: 1em;
+    }
+    .arcade-hold, .advanced-hold, .pro-hold{
+     border-radius: 7px;
+      height: 10em;
+      border: var(--neutral-color2) 1px solid;
+    }
+    .form-cont2, .form-cont3{
+      margin-top: 1em;
+      position: absolute;
+      left: 9em;
+    }
+    .form-cont3{
+      margin-top: 1em;
+      position: absolute;
+      left: 18em;
+      
+    }
+    .arcade-hold img, .advanced-hold img, .pro-hold img {
+      margin-left: 1em;
+      margin-top: 1em; */
+    }
+  
+    .arcade-hold div, .advanced-hold div, .pro-hold div{
+      margin-left: 1em;
+      margin-top: 2em; */
+      color: var(--primary-color1); 
+      font-weight: 500;
+    }
+    .arcade-writes, .advanced-writes, .pro-writes{
+      position: absolute;
+      bottom: 1em;
+      font-size: 13px;
+      left: 1.3em;
+      line-height: 0.5;
+      color: var(--primary-color1);
+    }
+    
+      #sele-hold{
+        position: relative;
+      }
+      #sele-hold{
+        justify-content: space-evenly;
+        display: flex;
+        align-items: center;
+        background-color: var(--neutral-color3);
+        height: 2.5em;
+        width: 26em;
+        border-radius: 5px;
+      bottom: 44em;
+      left: 23em;
+    
+      }
+      .monthly{
+        position: relative;
+       left: 10em;
+      }
+      .yearly{
+        position: relative;
+        right: 10em;
+        opacity: 0.2;
+      }
+      #yearlySele1,#yearlySele2,#yearlySele3{
+      display: none;
+      }
+      
+      .color2{
+        cursor: default;
+        margin-right: 12em;
+        padding-right: 1em;
+        width: 2em;
+        height: 1.3em;
+        background-color: var(--neutral-color4);
+        color: var(--neutral-color4);
+        border-radius: 2em;
+      }
+    
+    .color1{
+      margin-left: 12em;
+      padding-left: 1em;
+      width: 2em;
+      height: 1.3em;
+      background-color: var(--primary-color1);
+      color: var(--primary-color1);
+      border-radius: 2em;
+    cursor: default;
+    }
+    #goBack1, #goBack2,  #goBack3{
+     
+      background-color: var(--neutral-color5); 
+      color: var(--neutral-color1);
+     }
+     #two-form{
+      width: 400px;
+      position: relative;
+      top: 3em;
+    }
+    .next-hold2,.next-hold3, .next-hold4{
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      /* padding: 12px; */
+      width: 50%;
+      left: 22em;
+      position: absolute;
+      bottom: 37em;
+    }
+    .next-hold3{
+      bottom: 27em;
+    }
+  /* 
+    THIRD FORM */
+    .onlineS-cont, .largerS-cont, .customizableP-cont {
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid var(--neutral-color1);
+    }
+    .largerS-cont:hover, .customizableP-cont:hover{
+      background-color: var(--neutral-color3);
+      border: var(--primary-color2) 1px solid;
+    }
+    .largerS-cont{
+      top: 1.5em;
+    }
+    .customizableP-cont{
+      top: 3em;
+    }
+    .onlineS-hold, .largerS-hold, .customizableP-hold{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 3.4em;
+    }
+    input[type="checkbox"]{
+      width: 1.5em;
+      height: 1.5em;
+      margin-left: 1em;
+      margin-bottom: -1.2em;
+      border-radius: 5px;
+    }
+    .onlineS-hold span, .largerS-hold span, .customizableP-hold span{
+      color: var(--primary-color1);
+      font-weight: 510;
+      padding-right: 8em;
+    }
+    .onlineS-hold p,  .largerS-hold p{
+      font-size: 14px;
+      color: var(--primary-color2);
+      margin-right: 3em;
+      top: 0.8em;
+      position: relative;
+    }
+    .largerS-hold span{
+  margin-right: -0.4em;
+    }
+    .customizableP-hold span {
+      margin-right: -0.6em;
+    }
+    .customizableP-hold p{
+      font-size: 14px;
+      color: var(--primary-color2);
+      right: 2.5em;
+      top: 0.8em;
+      position: relative;
+    }
+    .online-writes, .larger-writes, .customizable-writes{
+      color: var(--neutral-color1);
+      margin-left: 4em;
+    position: relative;
+    bottom: 1em;
+      font-size: 14px;
+    }
+    #third-form{
+      width: 400px;
+      padding-top: 1em;
+    }
+    /* FourthForm */
+    .change  a{
+      position: relative;
+      color: var(--neutral-color1);
+      bottom: 0.8em;
+      left: 1em;
+    }
+    .Arc-cont, .online-cont, .larger-cont, .total-cont{
+      position: relative;
+      top: 1em;
+    }
+    .Arc-hold, .online-hold, .larger-hold, .total-hold{
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 1em;
+      display: flex;
+    }
+    .larger-hold, .total-hold{
+      margin-top: 1.2em;
+    }
+    .online-hold div, .larger-hold div, .total-hold div{
+      color: var(--neutral-color1);
+    }
+    .online-hold p, .larger-hold p, .total-hold p, .Arc-hold p{
+      position: absolute;
+      color: var(--primary-color1);
+      opacity: 0.8;
+      left: 23em;
+    }
+    .Arc-hold div, .Arc-hold p{
+      color: var(--primary-color1);
+      font-weight: 550;
+    }
+    .linny{
+      border-bottom: 1px solid var(--neutral-color2);
+    position: absolute;
+    bottom: -0.9em;
+    width: 25em;
+    margin-left: 1em;
+    }
+    #fth-form{
+      background-color: var(--neutral-color4);
+      height: 10em;
+      width: 26em;
+      border-radius: 7px;
+      margin-top: 3em;
+      }
+      .Fourth-hold h2{
+        font-weight: 700;
+      }
+      /* FIFTH FORM */
+      .fifth-cont{
+        position: relative;
+       }
+      .fifth-hold{
+        position: absolute;
+        bottom: 20em;
+        left: 1.9em;
+      }
+      .thanks-ess{
+        position: absolute;
+     top:-4em;
+      }
+      .thanks-ess img{
+        height: 4em;
+        width: 4em;
+        padding-left: 47em;
+      }
+      .thanks-ess h1{
+        color: var(--primary-color1);
+        padding-left: 30em;
+        width: 9em;
+        font-size: 1.5em;
+      }
+  .thanks-cont{
+    width: 28em;
+  position: absolute;
+  left: 35em;
+  bottom: -8.5em;
+  color:  var(--neutral-color1);
+  line-height: 1.5;
+  text-align-last: center;
+  }
+  .thanks-cont span{
+    text-align-last: right;
+  }
+  }
+  
+
+/* Mobile Styles */
+@media (max-width: 376px) {
+    body {
+        background-image: url("../multi-step-form-main/assets/images/bg-sidebar-mobile.svg");
+        background-repeat: no-repeat;
+        font-family: "Ubuntu", sans-serif;
+        background-color: var(--neutral-color3);
+        height: 10px;
+        overflow-y: hidden;
+      }
+    
+      nav{
+        display: flex;
+        justify-content: space-evenly;
+        width: 70%;
+        padding-left: 3em;
+        align-items: center;
+        cursor: default;
+      }
+      .upNum-hold1 #step1, h4{
+        display: none;
+      }
+      .upNum-hold2 #step2, h4{
+        display: none;
+      }
+      .upNum-hold3 #step3, h4{
+        display: none;
+      }
+      .upNum-hold4 #step4, h4{
+        display: none;
+      }
+      nav p {
+        border-radius: 50%;
+        border: solid var(--neutral-color3) 2px;
+        justify-content: inherit;
+        align-items: inherit;
+        display: inherit;
+        padding: 12px;
+        width: 0.6em;
+        height: 0.6em;
+        color: var( --neutral-color5);
+      }
+        nav p:hover {
+          color: var(--primary-color1);
+          background-color: var(--primary-color4);
+        }
+        /* THE GENERAL WHITE SPACE..IT IS K */
+      .container{
+        background-color: var(--neutral-color5);
+        /* width: 80%; */
+        border-radius: 10px;
+        padding-top: 24em;
+        margin-top: 1.4em;
+        margin-left: 0.4em; 
+         margin-right: 0.4em;
+      }
+         /* THE GENERAL WHITE SPACE..ENDS*/
+         /* FIRST FORM AND IT'S EVERYTHING */
+      .first-form, .second-form, .Third-form, .Fourth-form{
+        position: relative;
+      }
+     
+      .second-hold{
+        position: absolute;
+        bottom: 4em;
+        left: 1.2em;
+        font-family: "Ubuntu", sans-serif;
+      }
+      
+      .first-hold{
+        position: absolute;
+        bottom: 2em;
+        left: 1.2em;
+        font-family: "Ubuntu", sans-serif;
+      }
+      .Third-hold{
+        position: absolute;
+        bottom: 5em;
+        left: 1.2em;
+        font-family: "Ubuntu", sans-serif; font-family: "Ubuntu", sans-serif;
+      }
+      .Fourth-hold{
+        position: absolute;
+        bottom: 5em;
+        left: 1.2em;
+        font-family: "Ubuntu", sans-serif; font-family: "Ubuntu", sans-serif;
+      }
+      .first-hold h2, .second-hold h2, .Third-hold h2, .Fourth-hold h2{
+        color: var(--primary-color1);
+      }
+      .first-hold p, .second-hold p, .Third-hold p, .Fourth-hold p{
+        width: 18em;
+        color: var(--neutral-color1);
+      }
+      .Fourth-hold h2{
+        font-size: 700;
+      }
+    
+      form {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--primary-color1);
+      }
+      input[type="text"],
+      input[type="email"] {
+        width: 98%;
+        padding: 8px;
+        font-size: 16px;
+        outline: none;
+        border: var(--neutral-color2) 1px solid;
+        border-radius: 5px;
+      }
+      input[type="text"]::placeholder,
+      input[type="email"]::placeholder{
+        color: var(--neutral-color1);
+      }
+      #next-cont1, #next-cont2, #next-cont3, #next-cont4{
+        margin-top: 4em;
+        background-color: var(--neutral-color5);
+        width: 100%;
+        height: 5em;
+      }
+      #next-cont2{
+        margin-top: 3em;
+      }
+      #nextPage1, #nextPage2, #goBack1, #nextPage3, #goBack2, #goBack3, #nextPage4{
+    border: none;
+    width: 6em;
+    height: 2em;
+    font-size: 1em;
+    border-radius: 5px;
+    background-color: var(--primary-color1);
+    color: var(--neutral-color4);
+      }
+      #nextPage4{
+        position: absolute;
+        background-color: var(--primary-color2);
+        margin-left: 9.5em;
+        margin-top: 0.5em;
+        /* margin-bottom: 15em; */
+      }
+      #goBack1, #goBack2, #goBack3{
+        background-color: var(--neutral-color5); 
+        color: var(--neutral-color1);
+       }
+      #nextPage1{
+        margin-left: 15em;
+        margin-top: 1em;
+      }
+      .next-hold2, .next-hold3{
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        padding: 12px;
+      }
+    /* SECOND FORM */
+    .form-cont1,.form-cont2, .form-cont3 {
+      position: relative;
+    }
+    
+    .arcade-hold, .advanced-hold, .pro-hold{
+      justify-content: flex-start;
+      display: flex;
+      align-items: center;
+      border: var(--neutral-color2) 1px solid;
+      height: 6em;
+      border-radius: 7px;
+    }
+    .form-cont2, .form-cont3{
+      margin-top: 1em;
+    }
+    .arcade-hold img, .advanced-hold img, .pro-hold img{
+      margin-left: 1em;
+      margin-bottom: 1.5em;
+    }
+    .arcade-hold div, .advanced-hold div, .pro-hold div{
+      margin-left: 1em;
+      margin-bottom: 2.5em;
+      color: var(--primary-color1);
+      font-weight: 550;
+    }
+    .arcade-writes, .advanced-writes, .pro-writes{
+      position: absolute;
+      bottom: 1.5em;
+      font-size: 13px;
+      left: 5.6em;
+      line-height: 0.7;
+      color: var(--primary-color1);
+    }
+    #sele-hold{
+      position: relative;
+    }
+    #sele-hold{
+      justify-content: space-evenly;
+      display: flex;
+      align-items: center;
+      background-color: var(--neutral-color3);
+      height: 2em;
+      margin-left: 1.2em;
+      margin-right: 1.2em;
+      border-radius: 5px;
+    bottom: 2em;
+    /* display: none; */
+    }
+    .monthly{
+      position: absolute;
+      left: 3em;
+    }
+    .yearly{
+      position: absolute;
+      right: 3em;
+      opacity: 0.2;
+    }
+    #yearlySele1,#yearlySele2,#yearlySele3{
+    display: none;
+    }
+    .color1{
+      margin-left: 12em;
+      padding-left: 1em;
+      width: 2em;
+      height: 1.3em;
+      background-color: var(--primary-color1);
+      color: var(--primary-color1);
+      border-radius: 2em;
+    cursor: default;
+    }
+    .color2{
+      cursor: default;
+      margin-right: 12em;
+      padding-right: 1em;
+      width: 2em;
+      height: 1.3em;
+      background-color: var(--neutral-color4);
+      color: var(--neutral-color4);
+      border-radius: 2em;
+    }
+    /* Third Form */.onlineS-cont, .largerS-cont, .customizableP-cont {
+      position: relative;
+      border-radius: 6px;
+      border: 1px solid var(--neutral-color1);
+    }
+    .largerS-cont{
+      top: 2em;
+    }
+    .customizableP-cont{
+      top: 4em;
+    }
+    input[type="checkbox"]{
+      width: 1.5em;
+      height: 1.5em;
+      margin-left: 1em;
+      margin-bottom: 0.4em;
+      border-radius: 5px;
+    }
+    .onlineS-hold, .largerS-hold, .customizableP-hold{
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      width: 33em;
+      height: 4em;
+    }
+    
+    .onlineS-hold span, .largerS-hold span, .customizableP-hold span{
+      color: var(--primary-color1);
+      font-weight: 510;
+      margin-right: 4.4em;
+      margin-bottom: 1.5em;
+    }
+    .onlineS-hold p,  .largerS-hold p{
+      font-size: 14px;
+      color: var(--primary-color2);
+      margin-right: 3em;
+    }
+    .customizableP-hold p{
+      font-size: 14px;
+      color: var(--primary-color2);
+      right: 2.5em;
+      position: relative;
+    }
+    
+    .online-writes, .larger-writes, .customizable-writes {
+      color: var(--neutral-color1);
+      margin-left: 3.3em;
+    position: absolute;
+    bottom: 1em;
+      font-size: 14px;
+    }
+    /* Fourth Form */
+    #fth-form{
+    background-color: var(--neutral-color4);
+    height: 10em;
+    border-radius: 7px;
+    }
+    .Arc-cont, .online-cont, .larger-cont, .total-cont{
+      position: relative;
+      top: 1em;
+    }
+    .Arc-hold, .online-hold, .larger-hold, .total-hold{
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 1em;
+      display: flex;
+    }
+    .larger-hold, .total-hold{
+      margin-top: 1.2em;
+    }
+    .online-hold div, .larger-hold div, .total-hold div{
+      color: var(--neutral-color1);
+    }
+    .online-hold p, .larger-hold p, .total-hold p{
+      position: absolute;
+      color: var(--primary-color1);
+      opacity: 0.8;
+      left: 14.6em;
+    }
+    .total-hold p{
+      color: var(--primary-color2);
+      opacity: none;
+      font-weight: 550;
+      left: 14em;
+    }
+    .Arc-hold div, .Arc-hold p{
+      color: var(--primary-color1);
+      font-weight: 550;
+    }
+    .Arc-hold p{
+      position: absolute;
+      left: 15em;
+      top: 0.3px;
+    }
+    .change  a{
+      position: relative;
+      color: var(--neutral-color1);
+      bottom: 0.8em;
+      left: 1em;
+    }
+    .linny{
+      border-bottom: 1px solid var(--neutral-color2);
+    position: absolute;
+    bottom: -0.9em;
+    left: 0.7em;
+    right: 0.7em;
+    }
+     /*fifth form */
+     .fifth-cont{
+      position: relative;
+     }
+    .fifth-hold{
+      position: absolute;
+      bottom: 30em;
+      left: 1.9em;
+    }
+    .thanks-cont{
+      font-family: "Ubuntu", sans-serif;
+    color: var(--neutral-color1);
+      font-weight: 500;
+      font-size: 16px;
+      padding: 5px;
+    }
+    .thanks-ess{
+      position: absolute;
+      bottom: 1.4em;
+    }
+    .thanks-ess img{
+      height: 3em;
+      padding-left: 8em;
+    }
+    .thanks-ess h1{
+      color: var(--primary-color1);
+      padding-left: 4em;
+      font-size: 1.5em;
+    }
+    .f1{
+      width: 21em;
+    }
+    .f2, .f3, .f4, .f5{
+     position: absolute;
+    width: 15em;
+    bottom: -0.9em;
+    right: 2.1em;
+    }
+    .f3{
+      left: 1.3em;
+      width: 20em;
+      bottom: -2.2em;
+    }
+    .f4{
+      left: 2.3em;
+      width: 20em;
+      bottom: -3.5em;
+    }
+    .f5{
+      left: 2.4em;
+      width: 20em;
+      bottom: -4.9em;
+    }
+    }

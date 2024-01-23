@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/images/favicon-32x32.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <title>Frontend Mentor--Challenge</title>
+</head>
+<body>
+  <section class="national">
+<nav>
+  <div class="upNum-cont1">
+    <p id="upNum fir" class="onenny">1</p>
+    <div class="upNum-hold1">
+       <H4>STEP 1</H4>
+      <div id='step1'> YOUR INFO</div>
+    </div>
+  </div>
+  <div class="upNum-cont2">
+    <p id="upNum" class="twonny">2</p>
+    <div class="upNum-hold2">
+      <H4>STEP 2</H4>
+      <div id='step2'>SELECT PLAN</div>
+    </div>
+  </div>
+  <div class="upNum-cont3">
+    <p id="upNum" class="threenny">3</p>
+    <div class="upNum-hold3">
+      <H4>STEP 3</H4>
+      <div id='step3'>ADD-ONS</div>   
+    </div>
+  </div>
+  <div class="upNum-cont4">
+    <p id="upNum" class="fournny">4</p>
+    <div class="upNum-hold4">
+       <H4>STEP 4</H4>
+      <div id='step4'>SUMMARY</div>
+    </div>
+  </div>
+</nav>
+<main>
+<section class="ALLFORMS">
+<div class="container">
+ <!-- FirstForm--> <div class="first-form">  <!-- The one delete--> 
+    <div class="first-hold">
+      <div class="twoHold">
+    <h2>Personal Info</h2>
+    <p>Please provide your name, email address, and phone Number.</p>
+  </div>
+    <form id="login-form">
+
+    <div class="form-group">
+      <label for="Name">Name</label>
+      <input type="text" id="name" name="name" placeholder="e.g stephen Kings" />
+    </div>
+    <div class="form-group">
+      <label for="Email">Email Address</label>
+      <input type="text" id="email" name="email" placeholder="e.g stephenking@lorem.com" />
+    </div>
+    <div class="form-group">
+      <label for="phoneNumber">Phone Number</label>
+      <input  type="email"  id="login-email" name="login-email" placeholder="e.g +1 234 567 890" />
+    </div>  
+  </form>
+
+  </div>
+ <!-- FirstForm Ends--> </div>
+
+ <!-- SecondForm--> <div class="second-form"   style="display:none">
+    <div class="second-hold">
+      <div class="twoHold">
+      <h2>SELECT YOUR PLAN</h2>
+      <p>You have the option of monthly and yearly billing</p>
+      </div>
+      <form action="#" id="two-form">
+    <!-- arcade -->   <div class="form-cont1"> 
+          <div class="arcade-hold">
+            <img src="../multi-step-form-main/assets/images/icon-arcade.svg" alt="Arcade">
+            <div>Arcade</div>
+          </div>
+          <div class="arcade-writes">
+            <p id="Form2Amount1">$9/mo</p>
+            <span id="yearlySele1">2 months free</span>
+          </div>
+    </div> 
+   
+ <!-- Advanced  -->  <div class="form-cont2">
+    <div class="advanced-hold">
+      <img src = "../multi-step-form-main/assets/images/icon-advanced.svg" alt="Advanced">
+        <div>Advanced</div>
+      </div>
+          <div class="advanced-writes">
+            <p id="Form2Amount2">$12/mo</p>
+            <span id="yearlySele2">2 months free</span>
+    </div>
+   <!-- arcade Ends -->   </div>
+
+<!-- pro--><div class="form-cont3"> 
+  <div class="pro-hold">
+    <img src="../multi-step-form-main/assets/images/icon-pro.svg" alt="Pro">
+      <div>Pro</div>
+  </div>
+  <div class="pro-writes">
+    <p id="Form2Amount3">15/mo</p>
+    <span id="yearlySele3">2 months free</span>
+  </div>
+<!-- pro Ends--></div> 
+      </form>
+    </div>
+ <!-- SecondForm Ends--> </div>
+ <div class="Third-form"  style="display:none">
+  <div class="Third-hold">
+    <div class="twoHold">
+    <h2>Pick Add-ons</h2>
+    <p>Add-ons help enhance your gaming experience.</p>
+    </div>
+    <form action="#" id="third-form">
+      <div class="onlineS-cont">
+        <div class="onlineS-hold">
+        <input type="checkbox" name="onlineService" id="onlineService">
+        <span>online service</span>
+        <p id="payAmount1">+$10/yr</p>
+        </div>
+        <div class="online-writes">
+          Access to multiplayer games
+        </div>
+      </div>
+      <div class="largerS-cont">
+        <div class="largerS-hold">
+        <input type="checkbox" name="largerStorage" id="largerStorage">
+        <span>Larger Storage</span>
+        <p  id="payAmount2">+$20/yr</p>
+        </div>
+        <div class="larger-writes">
+          Extra 1TB of cloud Save
+        </div>
+      </div>
+      <div class="customizableP-cont">
+        <div class="customizableP-hold">
+        <input type="checkbox" name="customizableProfile" id="customizableProfile">
+        <span>customizable Profile</span>
+        <p  id="payAmount3">+$20/yr</p>
+        </div>
+        <div class="customizable-writes">
+          Custom theme on your profile
+        </div>
+      </div>
+    </form>
+  </div>
+ </div>
+ <div class="Sele-cont" style="display: none" >
+  <div id="sele-hold">
+    <div class="monthly">monthly</div>
+    <span class="color1">m</span>
+    <span class="color2">m</span>
+    <div class="yearly">yearly</div>
+  </div>
+ </div>
+ <!-- Fourth-form starts here -->
+ <div class="Fourth-form" style="display: none;">
+  <div class="Fourth-hold">
+    <div class="twoHold">
+      <h2>Finishing Up</h2>
+      <p>Double-check Everything looks OK before Confirming.</p>
+    </div>
+      <form action="#" id="fth-form">
+        <div class="Arc-cont">
+          <div class="Arc-hold">
+            <div id="Arc-name">Arcade(Monthly)</div>
+            <p id="payA1">$9/mo</p>
+          </div>
+         <p class="change"><a href="#" id="changeLink">Change</a></p>
+         <p class="linny"></p>
+        </div>
+        <div class="online-cont">
+          <div class="online-hold">
+            <div id="online-name">Online Service</div>
+            <p id="payA2">+$1/mo</p>
+          </div>
+        </div>
+        <div class="larger-cont">
+          <div class="larger-hold">
+            <div id="larger-name">Larger Storage</div>
+            <p id="payA3">+$2/mo</p>
+          </div>
+        </div>
+      </form>
+      <div class="total-cont">
+        <div class="total-hold">
+          <div id="total-name">Total(per month)</div>
+          <p id="payT">+$12/mo</p>
+        </div>
+      </div>
+  </div>
+ </div>
+ <!-- fifth Form -->
+ <div class="fifth-form" style="display: none">
+  <div class="fifth-hold">
+    <div class="thanks-ess">
+    <img src="../multi-step-form-main/assets/images/icon-thank-you.svg" alt="Thank you">
+
+    <h1>  Thank you! <h1>
+    </div>
+      <div class="thanks-cont">
+   <span class="f1"> Thanks for confirming your subscriptioni!</span>
+   <span class="f2"> We hope you have fun using Our </span>
+   <span class="f3">  platForm. If you ever need support, </span>
+   <span class="f4">please feel free to email us at </span>
+   <span class="f5">Support @loremgaming.com</span>
+</div>
+  </div>
+ </div>
+
+<!-- container --></div>
+
+<!-- firstBtn--><div id="next-cont1"> <!--the one to delete-->
+  <input type="button" value="Next Page" id="nextPage1">
+<!-- firstBtn Ends--></div>
+<!-- SecondBtn--><div id="next-cont2"  style="display:none">
+  <div class="next-hold2">
+  <input type="button" value="Go Back" id="goBack1">
+  <input type="button" value="Next Page" id="nextPage2">
+</div>
+<!-- SecondBtn Ends--></div>
+<!-- ThirdBtn--><div id="next-cont3"  style="display:none">
+  <div class="next-hold3">
+    <input type="button" value="Go Back" id="goBack2">
+    <input type="button" value="Next Page" id="nextPage3">
+  </div>
+  <!-- ThirdBtn Ends--></div>
+  <!-- FOURTHBtn--><div id="next-cont4" style="display: none;">
+    <div class="next-hold4">
+      <input type="button" value="Go Back" id="goBack3">
+      <input type="button" value="Confirm" id="nextPage4">
+    </div>
+    <!-- FOURTHBtn Ends--></div>
+</section>
+</main>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
