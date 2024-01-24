@@ -138,17 +138,19 @@ window.addEventListener("DOMContentLoaded", function () {
     nextbtnCont2.style.display = "block";
     container.style.paddingTop = "33em";
     Form4.style.display = "none";
-
+    Form3.style.display = "none";
     for (let i = 0; i < SeleContainer.length; i++) {
       SeleContainer[i].style.display = "block";
     }
   }
   goToform2.addEventListener("click", (e) => {
+    e.preventDefault();
     ShowTwo(event);
     Form1.style.display = "none"
     nextPageBtn1.style.display = "none"
     Form3.style.display = "none"
-    nextPageBtn3.style.display = "none"
+    nextbtnCont3.style.display = "none"
+    // nextPageBtn3.style.display = "none"
     Form4.style.display = "none"
     nextbtnCont4.style.display = "none"
     Form5.style.display = "none"
@@ -308,8 +310,11 @@ Form5.style.display = "none"
   e.preventDefault();
    Form4.style.display = "block";
     Form3.style.display = "none";
+    Form2.style.display = "none"
+    nextbtnCont2.style.display = "none"
     nextbtnCont3.style.display = "none";
-    nextbtnCont4.style.display = "block";
+    nextbtnCont4.style.display = "block"
+    container.style.paddingTop = "26em"
   }
   nextPageBtn3.addEventListener("click", fourthForm);
   goToform4.addEventListener("click", (e) => {
@@ -319,11 +324,15 @@ Form5.style.display = "none"
    nextPageBtn1.style.display = "none"
    Form2.style.display = "none"
    nextbtnCont2.style.display = "none"
-
+   Form5.style.display = "none"
+   for (let i = 0; i < SeleContainer.length; i++) {
+    SeleContainer[i].style.display = "none";
+  }
   });
   goBack3.addEventListener("click", function () {
     Form4.style.display = "none";
     Form3.style.display = "block";
+
     nextbtnCont3.style.display = "block";
     nextbtnCont4.style.display = "none";
   });

@@ -447,6 +447,7 @@
         background-color: var(--neutral-color3);
         height: 10px;
         overflow-y: scroll;
+        overflow-x: hidden;
       }
     
       nav{
@@ -794,7 +795,7 @@
      }
     .fifth-hold{
       position: absolute;
-      bottom: 30em;
+      bottom: 22em;
       left: 1.9em;
     }
     .thanks-cont{
