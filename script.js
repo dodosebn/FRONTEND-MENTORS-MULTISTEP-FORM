@@ -159,7 +159,10 @@ window.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
     ShowTwo(event);
   });
-  Change.addEventListener("click", ShowTwo);
+  Change.addEventListener("click", (event) => {
+    ShowTwo(event);
+    nextbtnCont4.style.display = "none"
+  });
 
   function backToone(e){
 e.preventDefault();
