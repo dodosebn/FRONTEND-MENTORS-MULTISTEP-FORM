@@ -1,5 +1,6 @@
-const upNumElements = document.getElementsByClassName("upNum");
+const upNumElements = document.querySelectorAll("upNum");
 const container = document.querySelector(".container");
+const allWhite = document.querySelector(".national");
 const Arcade = document.querySelector(".form-cont1");
 const Advanced = document.querySelector(".form-cont2");
 const Pro = document.querySelector(".form-cont3");
@@ -46,11 +47,19 @@ const goToform1 = document.querySelector(".onenny");
 const goToform2 = document.querySelector(".twonny");
 const goToform3 = document.querySelector(".threenny");
 const goToform4 = document.querySelector(".fournny");
+// Form Validation stuff's
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const numberInput = document.getElementById("number");
+const InputError1 = document.getElementById("err1");
+const InputError2 = document.getElementById("err2");
+const InputError3 = document.getElementById("err3");
 
+console.log(Arcade);
 // console.log(Amount1.textContent = 'abc');
 window.addEventListener("DOMContentLoaded", function () {
   const mediaQuery = window.matchMedia("(min-width: 376px)");
-
+  const mobbquery = window.matchMedia("(min-width: 376px)");
   if (mediaQuery.matches) {
     if ((Form1.style.display = "block")) {
     }
@@ -68,6 +77,58 @@ window.addEventListener("DOMContentLoaded", function () {
       this.style.backgroundColor = "";
     });
   }
+
+  const FormValidation = (event) => {
+    event.preventDefault();
+  
+    // Name validation
+    const nameRegex = /^[A-Za-z]+$/;
+    if (nameInput.value.trim() === "" || !nameRegex.test(nameInput.value.trim())) {
+      nameInput.style.border = "var(--primary-color5) 1px solid";
+      InputError1.style.display = "block";
+      return false;
+    } else {
+      nameInput.style.border = "var(--neutral-color2) 1px solid";
+      InputError1.style.display = "none";
+    }
+  
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
+      emailInput.style.border = "var(--primary-color5) 1px solid";
+      InputError2.style.display = "block";
+      return false;
+    } else {
+      emailInput.style.border = "var(--neutral-color2) 1px solid";
+      InputError2.style.display = "none";
+    }
+  
+    // Number validation
+    const numberRegex = /^\d+$/;
+    if (numberInput.value.trim() === "" || !numberRegex.test(numberInput.value.trim())) {
+      numberInput.style.border = "var(--primary-color5) 1px solid";
+      InputError3.style.display = "block";
+      return false;
+    } else {
+      numberInput.style.border = "var(--neutral-color2) 1px solid";
+      InputError3.style.display = "none";
+    }
+  
+    ShowTwo(event);
+    return true;
+  };
+  emailInput.addEventListener("focus", function() {
+    nameInput.style.border = "var(--neutral-color2) 1px solid"
+    InputError1.style.display="none"
+    numberInput.style.border = "var(--neutral-color2) 1px solid"
+      InputError3.style.display="none"
+  });
+  numberInput.addEventListener("focus", function() {
+    emailInput.style.border = "var(--neutral-color2) 1px solid"
+    InputError2.style.display="none"
+    nameInput.style.border = "var(--neutral-color2) 1px solid"
+    InputError1.style.display="none"
+  });
 
   Arcade.addEventListener("mouseover", function () {
     this.style.backgroundColor = "var(--neutral-color3)";
@@ -100,6 +161,8 @@ window.addEventListener("DOMContentLoaded", function () {
     this.style.border = "";
     this.style.borderRadius = "";
   });
+
+
   onlineSCont.addEventListener("mouseover", function () {
     this.style.border = "var(--primary-color2) 1px solid";
     this.style.backgroundColor = "var(--neutral-color3)";
@@ -124,6 +187,7 @@ window.addEventListener("DOMContentLoaded", function () {
     this.style.border = "";
     this.style.backgroundColor = "";
   });
+
   if (Form1.style.display === "block") {
     container.style.paddingTop = "24em";
   } else if (Form1.style.display === "none") {
@@ -145,7 +209,11 @@ window.addEventListener("DOMContentLoaded", function () {
   }
   goToform2.addEventListener("click", (e) => {
     e.preventDefault();
-    ShowTwo(event);
+    if(!FormValidation(event)){
+      backToone(e)
+    }else if (FormValidation(event)) {
+      ShowTwo(event);
+      
     Form1.style.display = "none"
     nextPageBtn1.style.display = "none"
     Form3.style.display = "none"
@@ -154,16 +222,20 @@ window.addEventListener("DOMContentLoaded", function () {
     Form4.style.display = "none"
     nextbtnCont4.style.display = "none"
     Form5.style.display = "none"
+    }
+   
   });
   nextPageBtn1.addEventListener("click", (event) => {
     event.preventDefault();
-    ShowTwo(event);
+    FormValidation(event);
   });
+
+
   Change.addEventListener("click", (event) => {
     ShowTwo(event);
     nextbtnCont4.style.display = "none"
   });
-
+console.log(nextbtnCont4);
   function backToone(e){
 e.preventDefault();
 nextbtnCont2.style.display = "none";
@@ -181,14 +253,18 @@ for (let i = 0; i < SeleContainer.length; i++) {
   goBack1.addEventListener("click", backToone);
   goToform1.addEventListener("click", (e) => {
     e.preventDefault();
-    backToone(e);
-    Form2.style.display = "none";
-    nextbtnCont2.style.display ="none";
-    Form3.style.display = "none";
-    nextbtnCont3.style.display = "none";
-    Form4.style.display = "none";
-    nextbtnCont4.style.display = "none";
-    Form5.style.display = "none";
+    if(!FormValidation(event)){
+      backToone(e)
+    }else if (FormValidation(event)) {
+      backToone(e);
+      Form2.style.display = "none"
+    nextbtnCont2.style.display ="none"
+    Form3.style.display = "none"
+    nextbtnCont3.style.display = "none"
+    Form4.style.display = "none"
+    nextbtnCont4.style.display = "none"
+    Form5.style.display = "none"
+    }
   });
   monthlyColor.addEventListener("click", function () {
     yearlySele.style.opacity = "0.9";
@@ -293,11 +369,16 @@ for (let i = 0; i < SeleContainer.length; i++) {
   }
   nextPageBtn2.addEventListener("click", ThirdForm);
   goToform3.addEventListener("click", (e) => {
-    ThirdForm(e);
-Form1.style.display = "none";
-nextPageBtn1.style.display = "none"
-Form4.style.display = "none"
-Form5.style.display = "none"
+    if(!FormValidation(event)){
+      backToone(e)
+    }else if (FormValidation(event)) {
+      ThirdForm(e);
+      Form1.style.display = "none";
+      nextPageBtn1.style.display = "none"
+      Form4.style.display = "none"
+      Form5.style.display = "none"
+    }
+ 
   });
   goBack2.addEventListener("click", function () {
     nextbtnCont3.style.display = "none";
@@ -322,14 +403,18 @@ Form5.style.display = "none"
   nextPageBtn3.addEventListener("click", fourthForm);
   goToform4.addEventListener("click", (e) => {
   e.preventDefault();
-   fourthForm(e);
-   Form1.style.display = "none"
-   nextPageBtn1.style.display = "none"
-   Form2.style.display = "none"
-   nextbtnCont2.style.display = "none"
-   Form5.style.display = "none"
-   for (let i = 0; i < SeleContainer.length; i++) {
-    SeleContainer[i].style.display = "none";
+   if(!FormValidation(event)){
+    backToone(e)
+  }else if (FormValidation(event)) {
+    fourthForm(e);
+    Form1.style.display = "none"
+    nextPageBtn1.style.display = "none"
+    Form2.style.display = "none"
+    nextbtnCont2.style.display = "none"
+    Form5.style.display = "none"
+    for (let i = 0; i < SeleContainer.length; i++) {
+     SeleContainer[i].style.display = "none";
+   }
   }
   });
   goBack3.addEventListener("click", function () {

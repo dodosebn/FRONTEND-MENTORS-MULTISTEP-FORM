@@ -20,11 +20,17 @@
     body {
         background-color: var(--neutral-color3);
         font-family: "Ubuntu", sans-serif;
+        align-content: center;
+        display: block;
+        overflow-y: scroll;
+        /* overflow-x: hidden; */
+        justify-content: center;
       }
       .national {
         margin: 5em 14.5em;
         background-color: var(--neutral-color5);
-        height: 35em;
+        height: 35.5em;
+        width: 69%;
         border-radius: 1em;
       }
       /* THE SIDE WITH IMAGE AND IT'S CONSTANT */
@@ -92,12 +98,17 @@
       }
       /* THE CONSTANT SIDE ENDS HERE */
       /* NOW HERE IS FOR FIRST FORM */
-      .first-form, .second-form, .Third-form, .Fourth-form{
+      .first-form, .second-form, .Third-form, .Fourth-form, .fifth-form{
         position: relative;
       }
-      .first-hold, .second-hold, .Third-hold, .Fourth-hold{
+      .second-hold, .Third-hold, .Fourth-hold{
         position: absolute;
         bottom: 35em;
+        left: 23em;
+      }
+      .first-hold{
+        position: absolute;
+        bottom: 34em;
         left: 23em;
       }
       
@@ -122,15 +133,40 @@
        #login-form {
       width: 400px;
       position: relative;
-      top: 2em;
+      top: 1.6em;
     }
     .form-group {
-      margin-bottom: 15px;
+      margin-bottom: 2em;
     }
     label {
-      display: block;
-      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-around;
+  align-items: center;
+      margin-bottom: 1em;
+    }
+    label h3{
+      font-weight: 400;
+      font-size: 15px;
       color: var(--primary-color1);
+    }
+    #label1 h3{
+      position: absolute;
+      right: 23.7em;
+    } #label2 h3{
+      position: absolute;
+      right: 20em;
+    } #label3 h3{
+      position: absolute;
+      right: 19.5em;
+    }
+    .inp:hover{
+      border-color: 1px solid var(--primary-color2);
+    }
+    #err1, #err2,#err3 {
+     position: absolute;
+     left: 17.3em;
+     display: none;
+     color:var(--primary-color5);
     }
     input[type="text"],
     input[type="email"] {
@@ -400,13 +436,11 @@
         font-weight: 700;
       }
       /* FIFTH FORM */
-      .fifth-cont{
-        position: relative;
-       }
       .fifth-hold{
         position: absolute;
-        bottom: 20em;
-        left: 1.9em;
+        /* bottom: 20em; */
+        bottom: 45em;
+        left: -11.2em;
       }
       .thanks-ess{
         position: absolute;
@@ -445,11 +479,12 @@
         background-repeat: no-repeat;
         font-family: "Ubuntu", sans-serif;
         background-color: var(--neutral-color3);
-        height: 10px;
-        overflow-y: scroll;
-        overflow-x: hidden;
+        height: 10em;
+     overflow-y: hidden;
+     overflow-x: hidden;
       }
     
+      
       nav{
         display: flex;
         justify-content: space-evenly;
@@ -488,12 +523,12 @@
         /* THE GENERAL WHITE SPACE..IT IS K */
       .container{
         background-color: var(--neutral-color5);
-        /* width: 80%; */
+        width: 100%;
         border-radius: 10px;
         padding-top: 24em;
         margin-top: 1.4em;
-        margin-left: 0.4em; 
-         margin-right: 0.4em;
+       /* padding-left: 0.4em;
+       margin-right: 1em; */
       }
          /* THE GENERAL WHITE SPACE..ENDS*/
          /* FIRST FORM AND IT'S EVERYTHING */
@@ -510,7 +545,7 @@
       
       .first-hold{
         position: absolute;
-        bottom: 2em;
+        bottom: 0;
         left: 1.2em;
         font-family: "Ubuntu", sans-serif;
       }
@@ -542,12 +577,41 @@
         margin: 0 auto;
       }
       .form-group {
-        margin-bottom: 15px;
+        margin-bottom: 2em;
       }
       label {
-        display: block;
-        margin-bottom: 5px;
+        display: flex;
+        justify-content: space-around;
+    align-items: center;
+        margin-bottom: 1em;
+      }
+      label h3{
+        font-weight: 400;
+        font-size: 15px;
         color: var(--primary-color1);
+      }
+      .inp:hover{
+        border-color: 1px solid var(--primary-color2);
+      }
+      #label1 h3{
+        position: absolute;
+        right: 17.3em;
+      } #label2 h3{
+        position: absolute;
+        right: 13.6em;
+      } #label3 h3{
+        position: absolute;
+        right: 13em;
+      }
+      .inp:hover{
+        border-color: 1px solid var(--primary-color2);
+      }
+      #err1, #err2,#err3 {
+       position: absolute;
+    left: 11em;
+font-size: 15px;
+       color:var(--primary-color5);
+       display: none;
       }
       input[type="text"],
       input[type="email"] {
@@ -790,12 +854,12 @@
     right: 0.7em;
     }
      /*fifth form */
-     .fifth-cont{
+     .fifth-form{
       position: relative;
      }
     .fifth-hold{
       position: absolute;
-      bottom: 22em;
+      bottom: 11em;
       left: 1.9em;
     }
     .thanks-cont{
