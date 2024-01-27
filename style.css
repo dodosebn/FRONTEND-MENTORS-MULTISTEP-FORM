@@ -136,38 +136,36 @@
       top: 1.6em;
     }
     .form-group {
-      margin-bottom: 2em;
+      margin-bottom: 20px;
     }
+    
     label {
+      display: block;
+    }
+    
+    .label-container {
       display: flex;
-      justify-content: space-around;
-  align-items: center;
-      margin-bottom: 1em;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 5px;
     }
-    label h3{
-      font-weight: 400;
-      font-size: 15px;
+    
+    .label-container h3 {
+      margin: 0;
+      font-weight: 500;
       color: var(--primary-color1);
+
     }
-    #label1 h3{
-      position: absolute;
-      right: 23.7em;
-    } #label2 h3{
-      position: absolute;
-      right: 20em;
-    } #label3 h3{
-      position: absolute;
-      right: 19.5em;
+   .label-container p {
+      margin: 0;
+      font-size: 14px;
+      color: var(--primary-color5);
+      display: none;
     }
-    .inp:hover{
-      border-color: 1px solid var(--primary-color2);
-    }
-    #err1, #err2,#err3 {
-     position: absolute;
-     left: 17.3em;
-     display: none;
-     color:var(--primary-color5);
-    }
+    
+.inp:hover {
+  border: 1.5px solid var(--primary-color2);
+}
     input[type="text"],
     input[type="email"] {
       width: 100%;
@@ -544,7 +542,7 @@
       
       .first-hold{
         position: absolute;
-        bottom: 0;
+        bottom: 1em;
         left: 1.2em;
         font-family: "Ubuntu", sans-serif;
       }
@@ -577,47 +575,44 @@
       form {
         width: 300px;
         margin: 0 auto;
-        position: relative;
       }
       .form-group {
-        margin-bottom: 1.5em;
+        margin-bottom: 10px;
       }
+      
       label {
+        display: block;
+      }
+      
+      .label-container {
         display: flex;
-        justify-content: space-around;
-    align-items: center;
-        margin-bottom: 6%;
-        position: relative;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 5px;
       }
-      label h3{
-        font-weight: 400;
-        font-size: 15px;
+      
+      .label-container h3 {
+        margin: 0;
+        font-weight: 500;
         color: var(--primary-color1);
+        width: 17em;
+  
       }
-      .inp:hover{
-        border-color: 1px solid var(--primary-color2);
-      }
-      #label1 h3{
+     .label-container p {
+      /* width: 15em; */
+        margin: 0;
+        font-size: 14px;
+        color: var(--primary-color5);
+        display: block;
         position: absolute;
-        right: 86%;
-      } #label2 h3{
-        position: absolute;
-        right: 67%;
-      } #label3 h3{
-        position: absolute;
-        right: 65%;
+        left: 13em;
+        display: none;
       }
-      .inp:hover{
-        border-color: 1px solid var(--primary-color2);
-      }
-      #err1, #err2,#err3 {
-       position: absolute;
-    left: 58%;
-    top: -22px;
-font-size: 15px;
-       color:var(--primary-color5);
-       display: none;
-      }
+      
+  .inp:hover {
+    border: 1px solid var(--primary-color2);
+  }
+    
       input[type="text"],
       input[type="email"] {
         width: 98%;
