@@ -59,7 +59,7 @@ console.log(Arcade);
 // console.log(Amount1.textContent = 'abc');
 window.addEventListener("DOMContentLoaded", function () {
   const mediaQuery = window.matchMedia("(min-width: 376px)");
-  const mobbquery = window.matchMedia("(min-width: 376px)");
+  // const mobbquery = window.matchMedia("(min-width: 376px)");
   if (mediaQuery.matches) {
     if ((Form1.style.display = "block")) {
     }
@@ -82,37 +82,69 @@ window.addEventListener("DOMContentLoaded", function () {
     event.preventDefault();
   
     // Name validation
-    const nameRegex = /^[A-Za-z]+$/;
-    if (nameInput.value.trim() === "" || !nameRegex.test(nameInput.value.trim())) {
+    const nameRegex = /[A-Za-z]+$/;
+    if (nameInput.value.trim() === "") {
       nameInput.style.border = "var(--primary-color5) 1px solid";
       InputError1.style.display = "block";
       return false;
-    } else {
+    } if(!nameRegex.test(nameInput.value.trim())){
+  nameInput.style.border = "var(--primary-color5) 1px solid";
+          InputError1.textContent = "Has invalid characters";
+             InputError1.style.display = "block";
+             return false;
+    }
+    else {
       nameInput.style.border = "var(--neutral-color2) 1px solid";
       InputError1.style.display = "none";
     }
   
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (emailInput.value.trim() === "" || !emailRegex.test(emailInput.value.trim())) {
+    if (emailInput.value.trim() === "") {
       emailInput.style.border = "var(--primary-color5) 1px solid";
       InputError2.style.display = "block";
       return false;
-    } else {
+    } 
+    else {
       emailInput.style.border = "var(--neutral-color2) 1px solid";
       InputError2.style.display = "none";
     }
+    if( !emailRegex.test(emailInput.value.trim())){
+      emailInput.style.border = "var(--primary-color5) 1px solid";
+          InputError2.textContent = "invalid email Address";
+             InputError2.style.display = "block";
+             return false;
+   } else {
+    emailInput.style.border = "var(--neutral-color2) 1px solid";
+    InputError2.style.display = "none";
+  }
   
     // Number validation
     const numberRegex = /^\d+$/;
-    if (numberInput.value.trim() === "" || !numberRegex.test(numberInput.value.trim())) {
+    if (numberInput.value.trim() === "") {
       numberInput.style.border = "var(--primary-color5) 1px solid";
       InputError3.style.display = "block";
       return false;
-    } else {
+    }if(!numberRegex.test(numberInput.value.trim())){
+          numberInput.style.border = "var(--primary-color5) 1px solid";
+                InputError3.textContent = "invalid phone Number";
+      InputError3.style.display = "block";
+      return false;
+    }
+     else {
       numberInput.style.border = "var(--neutral-color2) 1px solid";
       InputError3.style.display = "none";
     }
+    if(numberInput.value.trim().length < 11){
+      numberInput.style.border = "var(--primary-color5) 1px solid";
+            InputError3.textContent = "incomplete phone No.";
+  InputError3.style.display = "block";
+  return false;
+}
+ else {
+  numberInput.style.border = "var(--neutral-color2) 1px solid";
+  InputError3.style.display = "none";
+}
   
     ShowTwo(event);
     return true;
