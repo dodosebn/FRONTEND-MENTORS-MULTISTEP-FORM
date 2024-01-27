@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", function () {
       return false;
     } if(!nameRegex.test(nameInput.value.trim())){
   nameInput.style.border = "var(--primary-color5) 1px solid";
-          InputError1.textContent = "Has invalid characters";
+          InputError1.textContent = "invalid name Format";
              InputError1.style.display = "block";
              return false;
     }
@@ -111,7 +111,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     if( !emailRegex.test(emailInput.value.trim())){
       emailInput.style.border = "var(--primary-color5) 1px solid";
-          InputError2.textContent = "invalid email Address";
+          InputError2.textContent = "your email address";
              InputError2.style.display = "block";
              return false;
    } else {
@@ -127,7 +127,7 @@ window.addEventListener("DOMContentLoaded", function () {
       return false;
     }if(!numberRegex.test(numberInput.value.trim())){
           numberInput.style.border = "var(--primary-color5) 1px solid";
-                InputError3.textContent = "invalid phone Number";
+                InputError3.textContent = "invalid Phone No.";
       InputError3.style.display = "block";
       return false;
     }
@@ -137,7 +137,7 @@ window.addEventListener("DOMContentLoaded", function () {
     }
     if(numberInput.value.trim().length < 11){
       numberInput.style.border = "var(--primary-color5) 1px solid";
-            InputError3.textContent = "incomplete phone No.";
+            InputError3.textContent = "make it 11 digits 🙏";
   InputError3.style.display = "block";
   return false;
 }
@@ -421,6 +421,7 @@ for (let i = 0; i < SeleContainer.length; i++) {
       SeleContainer[i].style.display = "block";
     }
     nextbtnCont2.style.display = "block";
+
   });
   function fourthForm(e){
   e.preventDefault();
